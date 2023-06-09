@@ -1,5 +1,5 @@
 // @ts-ignore
-import { IContact } from 'react-jwchat'
+import { IContact } from '@nojsja/react-chat'
 
 export const contactList = [
   {

@@ -1,16 +1,24 @@
 import React, { useState } from 'react'
-import { Chat, ContactList } from 'react-jwchat'
+import { Chat, ContactList } from '@nojsja/react-chat'
 import { contact, contactList, messageList, my } from './displayData'
 
 export default () => {
   const [chatListData, setChatListData] = useState<any[]>(messageList)
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', background: 'green', padding: 20 }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 20,
+        height: 709,
+        backgroundColor: 'ForestGreen',
+      }}
+    >
       <ContactList
         data={contactList}
         style={{
           marginRight: 10,
-          height: 500,
+          height: '100%',
           borderRadius: 5,
           overflow: 'hidden',
           width: 240,
@@ -23,8 +31,6 @@ export default () => {
         onSend={(msg: any) => setChatListData([...chatListData, msg])}
         onEarlier={() => console.log('EarlierEarlier')}
         style={{
-          width: 600,
-          height: 500,
           borderRadius: 5,
         }}
       />

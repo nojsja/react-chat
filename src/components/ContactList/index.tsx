@@ -1,8 +1,8 @@
-import React, { Component, ReactNode, UIEventHandler, useState } from 'react'
-import style from './style.module.css'
+import React, { useState } from 'react'
 import ScrollWrapper from '../ScrollWrapper'
 import ContactItem from '../ContactItem'
-import {IContact, IContactList } from '../../types'
+import style from './style.module.css'
+import { IContact, IContactList } from '../../types'
 
 const ContactList = (props: IContactList) => {
   const [selectId, setSelectId] = useState<number | string>()

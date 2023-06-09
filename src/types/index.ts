@@ -5,7 +5,7 @@ export interface IChatProps {
   me: IContact
   contact: IContact
   style: CSSProperties & { height: number }
-  chatList: any[]
+  chatList: IMessage[]
   onImage?: Function
   onEarlier?: MouseEventHandler
 }
@@ -29,7 +29,7 @@ export interface IContactItem {
 
 export interface IChatRecordList {
   onEarlier?: MouseEventHandler
-  data: any[]
+  data: IMessage[]
   me: IContact
   style?: CSSProperties
 }
@@ -40,7 +40,7 @@ export interface IChatToolBar {
   onImage?: Function
 }
 
-export interface IContactList {
+export interface IContactList extends HTMLDivElement {
   onSelect?: Function
   data: IContact[]
   onScroll?: UIEventHandler<HTMLDivElement>

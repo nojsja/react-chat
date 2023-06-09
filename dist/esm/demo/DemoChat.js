@@ -19,7 +19,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 import React, { useState } from 'react';
-import { Chat } from 'react-jwchat';
+import { Chat } from '@nojsja/react-chat';
 import { contact, my } from "./displayData";
 import DisplayWrapper from "./DisplayWrapper";
 import { jsx as _jsx } from "react/jsx-runtime";

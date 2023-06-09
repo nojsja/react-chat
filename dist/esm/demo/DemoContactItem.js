@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactItem } from 'react-jwchat';
+import { ContactItem } from '@nojsja/react-chat';
 import { contact } from "./displayData";
 import DisplayWrapper from "./DisplayWrapper";
 import { jsx as _jsx } from "react/jsx-runtime";

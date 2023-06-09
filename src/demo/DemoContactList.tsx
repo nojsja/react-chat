@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContactList } from 'react-jwchat'
+import { ContactList } from '@nojsja/react-chat'
 import { contactList } from './displayData'
 import DisplayWrapper from './DisplayWrapper'
 

@@ -3,17 +3,17 @@ import style from './style.module.css'
 import ChatInput from '../ChatInput'
 import ChatRecordList from '../ChatRecordList'
 import ScrollWrapper from '../ScrollWrapper'
-import {IChatProps} from "../../types";
 import ChatHeader from '../ChatHeader'
+import type { IChatProps } from '../../types';
 
-const textHeight = 150
+const textHeight = 120
 
 const WrappedChatRecordList = ScrollWrapper(ChatRecordList)
 
 const defaultChatProps = {
   style: {
-    width: 600,
-    height: 500,
+    width: '100%',
+    height: '100%',
   },
   contact: {},
   me: {},
@@ -28,7 +28,7 @@ export default function Chat(props: IChatProps) {
     props.onSend(msgData)
   }
 
-  const listHeight = props.style.height - textHeight - 60
+  // const listHeight = props.style.height - textHeight - 60
 
   return (
     <div className={style.content} style={props.style}>
@@ -36,8 +36,13 @@ export default function Chat(props: IChatProps) {
       <WrappedChatRecordList
         {...props}
         data={props.chatList}
-        style={{ height: listHeight }}
+        // style={{ height: listHeight }}
         scrollToBottom
+        style={{
+          ...props.style,
+          flex: 1,
+          overflow: 'auto',
+        }}
       />
       <ChatInput {...props} height={textHeight} onSend={sendHandle} onImage={props.onImage} />
     </div>

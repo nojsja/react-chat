@@ -1,14 +1,14 @@
 {
-  "name": "react-jwchat",
-  "version": "1.5.1",
-  "author": "SiroSong",
+  "name": "@nojsja/react-chat",
+  "version": "1.5.2",
+  "author": "Nojsja",
   "license": "MIT",
-  "description": "This is an easy-to-use web chat component, based on react.",
+  "description": "An easy-to-use web chat component, based on react.",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/wx_504ae56474/react-jwchat"
+    "url": "https://github.com/nojsja/react-chat.git"
   },
-  "homepage": "http://wx_504ae56474.gitee.io/react-jwchat",
+  "homepage": "https://github.com/nojsja/react-chat.git",
   "keywords": ["react", "chat", "UI", "聊天"],
   "scripts": {
     "start": "dumi dev",
@@ -38,12 +38,12 @@
     ]
   },
   "dependencies": {
-    "@types/react": "^18.0.17",
     "dayjs": "^1.11.5",
-    "md5": "^2.3.0",
-    "react": "^18.0.0"
+    "md5": "^2.3.0"
   },
   "devDependencies": {
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "^27.0.3",
@@ -55,7 +55,9 @@
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
-    "react-jwchat": "^1.2.1",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "@nojsja/react-chat": "1.5.2",
     "yorkie": "^2.0.0"
   }
 }

@@ -1,4 +1,4 @@
-# react-jwchat
+# react-chat
 
 ![npm type definitions](https://img.shields.io/npm/types/react-jwchat?style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/react-jwchat?style=for-the-badge&color=yellowgreen)
@@ -8,7 +8,7 @@
 
 ## 介绍
 
-react-jwchat 是一个简单的 web 聊天组件。
+react-chat 是一个简单的 web 聊天组件。
 
 主要作用是为快速实现在线聊天功能的前端页面。
 

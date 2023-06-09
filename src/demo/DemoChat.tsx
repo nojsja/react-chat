@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Chat } from 'react-jwchat'
+import React, { useState } from 'react';
+import { Chat } from '@nojsja/react-chat';
 import { contact, my } from "./displayData";
 import DisplayWrapper from "./DisplayWrapper";
 

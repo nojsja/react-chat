@@ -1,4 +1,4 @@
-import { IContact } from 'react-jwchat';
+import { IContact } from '@nojsja/react-chat';
 export declare const contactList: {
     id: number;
     avatar: string;
