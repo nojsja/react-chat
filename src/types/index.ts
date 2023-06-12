@@ -1,8 +1,10 @@
 import { CSSProperties, MouseEventHandler, ReactNode, UIEventHandler } from 'react';
 
+export type Me = Omit<IContact, 'date'>;
+
 export interface IChatProps {
   onSend: Function;
-  me: IContact;
+  me: Me;
   contact: IContact;
   style: CSSProperties;
   chatList: IMessage[];
@@ -15,7 +17,7 @@ export interface IContact {
   avatar?: string;
   nickname?: string;
   message?: string;
-  date?: string;
+  date: number; // timestamp in seconds from 1970
   desc?: string;
 }
 
@@ -30,7 +32,7 @@ export interface IContactItem {
 export interface IChatRecordList {
   onEarlier?: MouseEventHandler;
   data: IMessage[];
-  me: IContact;
+  me: Me;
   style?: CSSProperties;
 }
 
@@ -61,7 +63,7 @@ export interface IMsgBubble {
 
 export interface IMsgItem {
   data: IMessage;
-  me: IContact;
+  me: Me;
 }
 
 export interface IScrollWrapper {
@@ -72,7 +74,7 @@ export interface IScrollWrapper {
 }
 
 export interface IChatInput {
-  me: IContact;
+  me: Me;
   onSend: Function;
   onImage?: (files: FileList | null) => void;
   height: number;
@@ -87,7 +89,7 @@ export interface IPureMsg {
 
 export interface IMessage {
   _id: string;
-  date: number;
+  date: number; // timestamp in seconds from 1970
   user: IContact;
   message: IPureMsg;
 }

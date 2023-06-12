@@ -12,7 +12,7 @@ export default function ContactItem(props: IContactItem) {
         props.border && style.bottom_border,
         props.selected && style.selected,
       ])}
-      onClick={props.onClick.bind(null, props.contact)}
+      onClick={props.onClick?.bind(null, props.contact)}
     >
       <img className={style.icon} src={props.contact?.avatar} />
       <div className={style.info_area}>
