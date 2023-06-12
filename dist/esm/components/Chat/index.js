@@ -12,12 +12,12 @@ import ScrollWrapper from "../ScrollWrapper";
 import ChatHeader from "../ChatHeader";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
-var textHeight = 150;
+var textHeight = 120;
 var WrappedChatRecordList = ScrollWrapper(ChatRecordList);
 var defaultChatProps = {
   style: {
-    width: 600,
-    height: 500
+    width: '100%',
+    height: '100%'
   },
   contact: {},
   me: {},
@@ -30,20 +30,22 @@ Chat.defaultProps = defaultChatProps;
 export default function Chat(props) {
   var sendHandle = function sendHandle(msgData) {
     props.onSend(msgData);
-  };
+  }; // const listHeight = props.style.height - textHeight - 60
 
-  var listHeight = props.style.height - textHeight - 60;
+
   return /*#__PURE__*/_jsxs("div", {
     className: style.content,
     style: props.style,
     children: [/*#__PURE__*/_jsx(ChatHeader, {
       data: props.contact
     }), /*#__PURE__*/_jsx(WrappedChatRecordList, _objectSpread(_objectSpread({}, props), {}, {
-      data: props.chatList,
-      style: {
-        height: listHeight
-      },
-      scrollToBottom: true
+      data: props.chatList // style={{ height: listHeight }}
+      ,
+      scrollToBottom: true,
+      style: _objectSpread(_objectSpread({}, props.style), {}, {
+        flex: 1,
+        overflow: 'auto'
+      })
     })), /*#__PURE__*/_jsx(ChatInput, _objectSpread(_objectSpread({}, props), {}, {
       height: textHeight,
       onSend: sendHandle,

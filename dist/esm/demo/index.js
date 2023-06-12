@@ -33,14 +33,15 @@ export default (function () {
     style: {
       display: 'flex',
       justifyContent: 'center',
-      background: 'green',
-      padding: 20
+      padding: 20,
+      height: 709,
+      backgroundColor: 'ForestGreen'
     },
     children: [/*#__PURE__*/_jsx(ContactList, {
       data: contactList,
       style: {
         marginRight: 10,
-        height: 500,
+        height: '100%',
         borderRadius: 5,
         overflow: 'hidden',
         width: 240
@@ -56,8 +57,6 @@ export default (function () {
         return console.log('EarlierEarlier');
       },
       style: {
-        width: 600,
-        height: 500,
         borderRadius: 5
       }
     })]

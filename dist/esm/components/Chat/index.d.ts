@@ -1,10 +1,10 @@
-import { IChatProps } from "../../types";
+import type { IChatProps } from '../../types';
 declare function Chat(props: IChatProps): JSX.Element;
 declare namespace Chat {
     var defaultProps: {
         style: {
-            width: number;
-            height: number;
+            width: string;
+            height: string;
         };
         contact: {};
         me: {};

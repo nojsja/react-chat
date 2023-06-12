@@ -11,9 +11,9 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 import React, { useState } from 'react';
-import style from "./style.module.css";
 import ScrollWrapper from "../ScrollWrapper";
 import ContactItem from "../ContactItem";
+import style from "./style.module.css";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 var ContactList = function ContactList(props) {
