@@ -1,6 +1,6 @@
-import React from 'react'
-import { IContact } from '../../types'
-import style from './style.module.css'
+import React from 'react';
+import { IContact } from '../../types';
+import style from './style.module.css';
 
 export default function ChatHeader(props: { data: IContact }) {
   return (
@@ -11,7 +11,7 @@ export default function ChatHeader(props: { data: IContact }) {
         <span className={style.sologan}>{props.data.desc}</span>
       </div>
     </div>
-    )
+  );
 }
 
-ChatHeader.propTypes = {}
+ChatHeader.propTypes = {};

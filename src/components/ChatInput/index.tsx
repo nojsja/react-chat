@@ -1,31 +1,31 @@
-import React, { ChangeEvent, ChangeEventHandler, KeyboardEventHandler, useState } from 'react'
-import md5 from 'md5'
-import dayjs from 'dayjs'
+import React, { ChangeEvent, ChangeEventHandler, KeyboardEventHandler, useState } from 'react';
+import md5 from 'md5';
+import dayjs from 'dayjs';
 
-import ChatToolBar from '../ChatToolsBar'
-import { IChatInput, IMessage } from "../../types";
-import style from './style.module.css'
+import ChatToolBar from '../ChatToolsBar';
+import { IChatInput, IMessage } from '../../types';
+import style from './style.module.css';
 
-export default function ChatInput({ me, onSend = () => { }, onImage, height }: IChatInput) {
-  const [text, setText] = useState('')
-  const [isShift, setIsShift] = useState(false)
-  const [isAllowSend, setIsAllowSend] = useState(false)
+export default function ChatInput({ me, onSend = () => {}, onImage, height }: IChatInput) {
+  const [text, setText] = useState('');
+  const [isShift, setIsShift] = useState(false);
+  const [isAllowSend, setIsAllowSend] = useState(false);
 
   const textChangeHandle: ChangeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    const isAllowSend = !!e.target.value.trim()
-    const text = e.target.value
+    const isAllowSend = !!e.target.value.trim();
+    const text = e.target.value;
 
-    setText(text)
-    setIsAllowSend(isAllowSend)
-  }
+    setText(text);
+    setIsAllowSend(isAllowSend);
+  };
 
   const sendHandle = () => {
     if (!isAllowSend) {
-      return
+      return;
     }
 
-    const randomNum = Math.floor(Math.random() * 1000)
-    const date = dayjs().unix()
+    const randomNum = Math.floor(Math.random() * 1000);
+    const date = dayjs().unix();
 
     const msgData: IMessage = {
       _id: md5(`${text}${date}${randomNum}`),
@@ -35,37 +35,37 @@ export default function ChatInput({ me, onSend = () => { }, onImage, height }: I
         type: 'text',
         content: text,
       },
-    }
-    onSend(msgData)
-    resetText()
-  }
+    };
+    onSend(msgData);
+    resetText();
+  };
 
   const resetText = () => {
-    setText('')
-    setIsAllowSend(false)
-  }
+    setText('');
+    setIsAllowSend(false);
+  };
 
   const keyDownHandle: KeyboardEventHandler = (e) => {
     if (e.keyCode === 16) {
-      setIsShift(true)
+      setIsShift(true);
     }
 
     if (e.keyCode === 13 && !isShift) {
-      e.preventDefault()
-      sendHandle()
+      e.preventDefault();
+      sendHandle();
     }
-  }
+  };
 
   const keyUpHandle: KeyboardEventHandler = (e) => {
     if (e.keyCode === 16) {
-      setIsShift(false)
+      setIsShift(false);
     }
-  }
+  };
 
   const emojiSelectHandle = (emoji: string) => {
-    setText(text + emoji)
-    setIsAllowSend(true)
-  }
+    setText(text + emoji);
+    setIsAllowSend(true);
+  };
 
   return (
     <div className={style.content} style={{ height: height }}>
@@ -76,12 +76,13 @@ export default function ChatInput({ me, onSend = () => { }, onImage, height }: I
         onKeyDown={keyDownHandle}
         onChange={textChangeHandle}
         value={text}
-        placeholder="请输入..."></textarea>
+        placeholder="请输入..."
+      ></textarea>
       <div className={style.but_area}>
         <button className={style.but} onClick={sendHandle} disabled={!isAllowSend}>
           发送
         </button>
       </div>
     </div>
-  )
+  );
 }

@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import ScrollWrapper from '../ScrollWrapper'
-import ContactItem from '../ContactItem'
-import style from './style.module.css'
-import { IContact, IContactList } from '../../types'
+import React, { useState } from 'react';
+import ScrollWrapper from '../ScrollWrapper';
+import ContactItem from '../ContactItem';
+import style from './style.module.css';
+import { IContact, IContactList } from '../../types';
 
 const ContactList = (props: IContactList) => {
-  const [selectId, setSelectId] = useState<number | string>()
+  const [selectId, setSelectId] = useState<number | string>();
 
   const selectContactHandle = (con: IContact) => {
-    setSelectId(con.id)
-    props.onSelect && props.onSelect(con)
-  }
+    setSelectId(con.id);
+    props.onSelect && props.onSelect(con);
+  };
 
   return (
     <div className={style.list_area} onScroll={props.onScroll}>
@@ -24,7 +24,7 @@ const ContactList = (props: IContactList) => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default ScrollWrapper(ContactList)
+export default ScrollWrapper(ContactList);

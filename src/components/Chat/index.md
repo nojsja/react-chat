@@ -14,19 +14,19 @@ Demo:
 
 ### Properties
 
-| key       | type    | desc                         | required |
-|-----------|---------|------------------------------|----------|
-| contact   | Contact | 联系人信息                        | true     |
-| me        | Contact | 本人信息                         | true     |
-| style     | style   | 容器样式（使用组件时需要指定 width、height） | true     |
+| key     | type    | desc                                         | required |
+| ------- | ------- | -------------------------------------------- | -------- |
+| contact | Contact | 联系人信息                                   | true     |
+| me      | Contact | 本人信息                                     | true     |
+| style   | style   | 容器样式（使用组件时需要指定 width、height） | true     |
 
 ### Events
 
-| key       | type    | desc                         | required |
-|-----------|---------|------------------------------|----------|
-| onSend    | func    | 发送消息时触发回调，回调参数为组装好的消息对象      | true     |
-| onImage   | func    | 选择图片后触发回调，回调参数为图片列表          | true     |
-| onEarlier | func    | 点击加载更多回调                     | false    |
+| key       | type | desc                                           | required |
+| --------- | ---- | ---------------------------------------------- | -------- |
+| onSend    | func | 发送消息时触发回调，回调参数为组装好的消息对象 | true     |
+| onImage   | func | 选择图片后触发回调，回调参数为图片列表         | true     |
+| onEarlier | func | 点击加载更多回调                               | false    |
 
 ## Message
 
@@ -73,9 +73,9 @@ Demo:
 
 说明：
 
-| key     | desc              |
-|---------|-------------------|
+| key     | desc                               |
+| ------- | ---------------------------------- |
 | \_id    | 每条信息的唯一标识，组件内自动生成 |
-| date    | 消息产生时间            |
-| user    | 当前消息发起人的信息        |
-| message | 消息内容主体            |
+| date    | 消息产生时间                       |
+| user    | 当前消息发起人的信息               |
+| message | 消息内容主体                       |

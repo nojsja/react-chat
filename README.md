@@ -1,10 +1,6 @@
 # react-chat
 
-![npm type definitions](https://img.shields.io/npm/types/react-jwchat?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/react-jwchat?style=for-the-badge&color=yellowgreen)
-![npm bundle size](https://img.shields.io/bundlephobia/min/react-jwchat?color=success&style=for-the-badge)
-![npm](https://img.shields.io/npm/dw/react-jwchat?style=for-the-badge&color=yellow)
-![NPM](https://img.shields.io/npm/l/react-jwchat?color=orange&style=for-the-badge)
+![npm type definitions](https://img.shields.io/npm/types/react-jwchat?style=for-the-badge) ![npm](https://img.shields.io/npm/v/react-jwchat?style=for-the-badge&color=yellowgreen) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-jwchat?color=success&style=for-the-badge) ![npm](https://img.shields.io/npm/dw/react-jwchat?style=for-the-badge&color=yellow) ![NPM](https://img.shields.io/npm/l/react-jwchat?color=orange&style=for-the-badge)
 
 ## 介绍
 
@@ -14,7 +10,7 @@ react-chat 是一个简单的 web 聊天组件。
 
 主要组件（暂时）包含聊天组件、联系人列表组件、单个联系人组件。
 
-***如果你也喜欢开源，如果你也喜欢这个项目请留下你的 Star 🌟，你们的 🌟 是对作者最大的鼓励，或者留下你的代码我们一起让他变得更好~~~***
+**_如果你也喜欢开源，如果你也喜欢这个项目请留下你的 Star 🌟，你们的 🌟 是对作者最大的鼓励，或者留下你的代码我们一起让他变得更好~~~_**
 
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5af08366dd6b4e96a27af39387d2ca41~tplv-k3u1fbpfcp-watermark.image)
 
@@ -188,9 +184,9 @@ pnpm install react-jwchat
 
 说明：
 
-| key     | desc              |
-|---------|-------------------|
+| key     | desc                               |
+| ------- | ---------------------------------- |
 | \_id    | 每条信息的唯一标识，组件内自动生成 |
-| date    | 消息产生时间            |
-| user    | 当前消息发起人的信息        |
-| message | 消息内容主体            |
+| date    | 消息产生时间                       |
+| user    | 当前消息发起人的信息               |
+| message | 消息内容主体                       |

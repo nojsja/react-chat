@@ -1,5 +1,5 @@
-import { CSSProperties, MouseEventHandler } from 'react'
+import { CSSProperties, MouseEventHandler } from 'react';
 
-export { default as Chat } from './components/Chat'
-export { default as ContactList } from './components/ContactList'
-export { default as ContactItem } from './components/ContactItem'
+export { default as Chat } from './components/Chat';
+export { default as ContactList } from './components/ContactList';
+export { default as ContactItem } from './components/ContactItem';

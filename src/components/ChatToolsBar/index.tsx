@@ -1,8 +1,8 @@
-import React from 'react'
-import EmojiPopover from '../EmojiPopover'
-import ImgPopover from '../ImgPopover'
-import { IChatToolBar } from '../../types'
-import style from './style.module.css'
+import React from 'react';
+import EmojiPopover from '../EmojiPopover';
+import ImgPopover from '../ImgPopover';
+import { IChatToolBar } from '../../types';
+import style from './style.module.css';
 
 export default function ChatToolBar({ tools = [], onEmojiSelect, onImage }: IChatToolBar) {
   return (
@@ -11,5 +11,5 @@ export default function ChatToolBar({ tools = [], onEmojiSelect, onImage }: ICha
       {typeof onImage === 'function' && <ImgPopover onImage={onImage} />}
       {tools.map((tool) => tool)}
     </div>
-    )
+  );
 }

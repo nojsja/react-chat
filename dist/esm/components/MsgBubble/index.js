@@ -1,10 +1,10 @@
 import React from 'react';
-import style from "./style.module.css";
-import cns from "../../utils/toClass";
-import { jsx as _jsx } from "react/jsx-runtime";
+import style from './style.module.css';
+import cns from '../../utils/toClass';
+import { jsx as _jsx } from 'react/jsx-runtime';
 export default function MsgBubble(_ref) {
   var data = _ref.data,
-      isMe = _ref.isMe;
+    isMe = _ref.isMe;
 
   var renderContent = function renderContent(message) {
     switch (message.type) {
@@ -12,9 +12,9 @@ export default function MsgBubble(_ref) {
         return message.content;
 
       case 'image':
-        return /*#__PURE__*/_jsx("img", {
+        return /*#__PURE__*/ _jsx('img', {
           className: cns([style.img_content]),
-          src: message.content
+          src: message.content,
         });
 
       default:
@@ -22,8 +22,8 @@ export default function MsgBubble(_ref) {
     }
   };
 
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/ _jsx('div', {
     className: cns([style.text_content, style.arrow, isMe ? style.arrow_right : style.arrow_left]),
-    children: renderContent(data)
+    children: renderContent(data),
   });
 }

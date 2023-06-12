@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Chat } from '@nojsja/react-chat';
-import { contact, my } from "./displayData";
-import DisplayWrapper from "./DisplayWrapper";
+import { contact, my } from './displayData';
+import DisplayWrapper from './DisplayWrapper';
 
 export default function DemoChat() {
-  const [chatListData, setChatListData] = useState<any[]>([])
+  const [chatListData, setChatListData] = useState<any[]>([]);
   return (
     <DisplayWrapper>
       <Chat
@@ -17,9 +17,9 @@ export default function DemoChat() {
           width: 600,
           height: 500,
           borderRadius: 5,
-          border: '1px solid rgb(226, 226, 226)'
-      }}
+          border: '1px solid rgb(226, 226, 226)',
+        }}
       />
     </DisplayWrapper>
-  )
+  );
 }

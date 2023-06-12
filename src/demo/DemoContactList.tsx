@@ -1,7 +1,7 @@
-import React from 'react'
-import { ContactList } from '@nojsja/react-chat'
-import { contactList } from './displayData'
-import DisplayWrapper from './DisplayWrapper'
+import React from 'react';
+import { ContactList } from '@nojsja/react-chat';
+import { contactList } from './displayData';
+import DisplayWrapper from './DisplayWrapper';
 
 export default function DemoContactList() {
   return (
@@ -14,9 +14,9 @@ export default function DemoContactList() {
           borderRadius: 5,
           overflow: 'hidden',
           width: 240,
-          border: '1px solid rgb(226, 226, 226)'
-      }}
+          border: '1px solid rgb(226, 226, 226)',
+        }}
       />
     </DisplayWrapper>
-    )
+  );
 }

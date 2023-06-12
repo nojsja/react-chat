@@ -14,17 +14,17 @@ Demo:
 
 ### Properties
 
-| key     | type    | desc                                   | required |
-|---------|---------|----------------------------------------|----------|
-| contact | Contact | 联系人信息                                  | true     |
+| key     | type    | desc                                                       | required |
+| ------- | ------- | ---------------------------------------------------------- | -------- |
+| contact | Contact | 联系人信息                                                 | true     |
 | border  | boolean | 时候显示列表项底部分隔线，在 ContactList 组件中默认为 true | false    |
-| style   | style   | 容器样式                                   | false    |
+| style   | style   | 容器样式                                                   | false    |
 
 ### Events
 
-| key     | type    | desc                                   | required |
-|---------|---------|----------------------------------------|----------|
-| onClick | func    | 点击回调，回调参数包含当前联系人信息                     | false    |
+| key     | type | desc                                 | required |
+| ------- | ---- | ------------------------------------ | -------- |
+| onClick | func | 点击回调，回调参数包含当前联系人信息 | false    |
 
 ## Contact
 
@@ -47,11 +47,11 @@ Demo:
 
 说明：
 
-| key      | desc             |
-|----------|------------------|
-| id       | 用户标示，需要唯一        |
-| avatar   | 用户头像             |
-| nickname | 用户昵称             |
-| message  | 最近一条信息           |
-| date     | 信息更新时间           |
+| key      | desc                           |
+| -------- | ------------------------------ |
+| id       | 用户标示，需要唯一             |
+| avatar   | 用户头像                       |
+| nickname | 用户昵称                       |
+| message  | 最近一条信息                   |
+| date     | 信息更新时间                   |
 | desc     | 用户简介(用于在聊天框头部显示) |

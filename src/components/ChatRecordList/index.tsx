@@ -1,8 +1,8 @@
-import React from 'react'
-import style from './style.module.css'
-import MsgItem from '../MsgItem'
-import cns from '../../utils/toClass'
-import { IChatRecordList } from '../../types'
+import React from 'react';
+import style from './style.module.css';
+import MsgItem from '../MsgItem';
+import cns from '../../utils/toClass';
+import { IChatRecordList } from '../../types';
 
 const ChatRecordList = (props: IChatRecordList) => {
   return (
@@ -14,9 +14,9 @@ const ChatRecordList = (props: IChatRecordList) => {
       </div>
       {props.data.map((bubble) => (
         <MsgItem {...props} data={bubble} key={bubble._id} />
-        ))}
+      ))}
     </div>
-    )
-}
+  );
+};
 
-export default ChatRecordList
+export default ChatRecordList;

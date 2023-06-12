@@ -1,16 +1,14 @@
-import React from 'react'
-import style from './style.module.css'
-import MsgBubble from '../MsgBubble'
-import dayjs from 'dayjs'
-import { IMsgItem } from '../../types'
+import React from 'react';
+import style from './style.module.css';
+import MsgBubble from '../MsgBubble';
+import dayjs from 'dayjs';
+import { IMsgItem } from '../../types';
 
 export default function MsgItem({ data, me }: IMsgItem) {
-  const isMe = data.user.id === me.id
+  const isMe = data.user.id === me.id;
 
   return (
-    <div
-      className={style.content}
-      style={{ flexDirection: isMe ? 'row-reverse' : 'row' }}>
+    <div className={style.content} style={{ flexDirection: isMe ? 'row-reverse' : 'row' }}>
       <div className={style.avatar}>
         <img src={data.user.avatar} />
       </div>
@@ -22,5 +20,5 @@ export default function MsgItem({ data, me }: IMsgItem) {
         <MsgBubble isMe={isMe} data={data.message} />
       </div>
     </div>
-    )
+  );
 }

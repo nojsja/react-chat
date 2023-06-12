@@ -1,4 +1,4 @@
-import { defineConfig } from 'dumi'
+import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'react-chat',
@@ -9,4 +9,4 @@ export default defineConfig({
   // more config: https://d.umijs.org/config
   base: '/react-chat/',
   publicPath: '/react-chat/',
-})
+});

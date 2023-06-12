@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Chat, ContactList } from '@nojsja/react-chat'
-import { contact, contactList, messageList, my } from './displayData'
+import React, { useState } from 'react';
+import { Chat, ContactList } from '@nojsja/react-chat';
+import { contact, contactList, messageList, my } from './displayData';
 
 export default () => {
-  const [chatListData, setChatListData] = useState<any[]>(messageList)
+  const [chatListData, setChatListData] = useState<any[]>(messageList);
   return (
     <div
       style={{
@@ -35,5 +35,5 @@ export default () => {
         }}
       />
     </div>
-  )
-}
+  );
+};
