@@ -1,11 +1,12 @@
 import React, { ChangeEvent, ChangeEventHandler, KeyboardEventHandler, useState } from 'react'
-import style from './style.module.css'
 import md5 from 'md5'
 import dayjs from 'dayjs'
-import ChatToolBar from '../ChatToolsBar'
-import {IChatInput, IMessage} from "../../types";
 
-export default function ChatInput({ me, onSend = () => {}, onImage, height }: IChatInput) {
+import ChatToolBar from '../ChatToolsBar'
+import { IChatInput, IMessage } from "../../types";
+import style from './style.module.css'
+
+export default function ChatInput({ me, onSend = () => { }, onImage, height }: IChatInput) {
   const [text, setText] = useState('')
   const [isShift, setIsShift] = useState(false)
   const [isAllowSend, setIsAllowSend] = useState(false)
@@ -82,5 +83,5 @@ export default function ChatInput({ me, onSend = () => {}, onImage, height }: IC
         </button>
       </div>
     </div>
-    )
+  )
 }

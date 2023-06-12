@@ -11,10 +11,10 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 import React, { useState } from 'react';
-import style from "./style.module.css";
 import md5 from 'md5';
 import dayjs from 'dayjs';
 import ChatToolBar from "../ChatToolsBar";
+import style from "./style.module.css";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 export default function ChatInput(_ref) {

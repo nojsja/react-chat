@@ -4,9 +4,9 @@ export interface IChatProps {
   onSend: Function
   me: IContact
   contact: IContact
-  style: CSSProperties & { height: number }
+  style: CSSProperties
   chatList: IMessage[]
-  onImage?: Function
+  onImage?: (files: FileList | null) => void;
   onEarlier?: MouseEventHandler
 }
 
@@ -36,12 +36,12 @@ export interface IChatRecordList {
 
 export interface IChatToolBar {
   tools?: any[]
-  onEmojiSelect?: Function
-  onImage?: Function
+  onEmojiSelect?: (contact: string) => void
+  onImage?: (files: FileList | null) => void
 }
 
-export interface IContactList extends HTMLDivElement {
-  onSelect?: Function
+export interface IContactList extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onSelect'> {
+  onSelect?: (contact: IContact) => void
   data: IContact[]
   onScroll?: UIEventHandler<HTMLDivElement>
 }
@@ -51,7 +51,7 @@ export interface IEmojiPopover {
 }
 
 export interface IImgPopover {
-  onImage: Function
+  onImage: (files: FileList | null) => void
 }
 
 export interface IMsgBubble {
@@ -66,7 +66,7 @@ export interface IMsgItem {
 
 export interface IScrollWrapper {
   data: Object[]
-  style?: CSSProperties
+  style?: Partial<CSSProperties>
   scrollToBottom?: boolean
   children?: ReactNode
 }
@@ -74,7 +74,7 @@ export interface IScrollWrapper {
 export interface IChatInput {
   me: IContact
   onSend: Function
-  onImage?: Function
+  onImage?: (files: FileList | null) => void
   height: number
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import style from './style.module.css'
 import EmojiPopover from '../EmojiPopover'
 import ImgPopover from '../ImgPopover'
 import { IChatToolBar } from '../../types'
+import style from './style.module.css'
 
 export default function ChatToolBar({ tools = [], onEmojiSelect, onImage }: IChatToolBar) {
   return (

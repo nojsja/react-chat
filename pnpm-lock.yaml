@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@nojsja/react-chat': 1.5.2
+  '@nojsja/react-chat': 1.5.3
   '@testing-library/jest-dom': ^5.15.1
   '@testing-library/react': ^13.0.0
   '@types/jest': ^27.0.3
@@ -26,7 +26,7 @@ dependencies:
   md5: 2.3.0
 
 devDependencies:
-  '@nojsja/react-chat': 1.5.2
+  '@nojsja/react-chat': 1.5.3
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0_q3ro2d4tisdm4fljj6b5phevaq
   '@types/jest': 27.5.2
@@ -1996,8 +1996,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@nojsja/react-chat/1.5.2:
-    resolution: {integrity: sha512-WEPI8kJ4PB/sl/tXeN6CUxh7qNOZ4jmp8JkwPnbFTP8wfsfNgRekoca/ZrXVzizBTJnH0GsKm8oDCDUWg2h6Cg==}
+  /@nojsja/react-chat/1.5.3:
+    resolution: {integrity: sha512-hFke+QDJMkjdtxWR+4vbPOzqLqFQme0mS7apW1l2rdI6N5xLQJg28lMY27+Usmk+8fdVJ2CPObx3VsZX4yz8+Q==}
     dependencies:
       dayjs: 1.11.5
       md5: 2.3.0

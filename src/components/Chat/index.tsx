@@ -4,7 +4,7 @@ import ChatInput from '../ChatInput'
 import ChatRecordList from '../ChatRecordList'
 import ScrollWrapper from '../ScrollWrapper'
 import ChatHeader from '../ChatHeader'
-import type { IChatProps } from '../../types';
+import type { IChatProps } from '../../types'
 
 const textHeight = 120
 
