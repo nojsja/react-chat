@@ -1,4 +1,5 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
+import dayjs from 'dayjs';
 import style from './style.module.css';
 import cns from '../../utils/toClass';
 import { IContactItem } from '../../types';
@@ -19,7 +20,9 @@ export default function ContactItem(props: IContactItem) {
         <span className={`${style.nickname} ${style.ellipsis}`}>{props.contact?.nickname}</span>
         <span className={`${style.desc} ${style.ellipsis}`}>{props.contact?.message}</span>
       </div>
-      <span className={style.date_area}>{props.contact?.date}</span>
+      <span className={style.date_area}>
+        { props.contact?.date && dayjs.unix(props.contact?.date).format('MM-DD HH:mm:ss') }
+      </span>
     </div>
   );
 }

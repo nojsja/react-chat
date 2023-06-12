@@ -1,6 +1,6 @@
 {
   "name": "@nojsja/react-chat",
-  "version": "1.5.3",
+  "version": "1.5.5",
   "author": "Nojsja",
   "license": "MIT",
   "description": "An easy-to-use web chat component, based on react.",
